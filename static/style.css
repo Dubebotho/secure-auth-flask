@@ -1,0 +1,120 @@
+body {
+    background-color: #E8EBF0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.btn-primary-custom {
+    background-color: #1A1A1A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-weight: 600;
+}
+
+.btn-primary-custom:hover {
+    background-color: #333333;
+    color: white;
+}
+
+.btn-link-custom {
+    color: #6B5CE7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-link-custom:hover {
+    color: #5347c7;
+    text-decoration: underline;
+}
+
+.card-custom {
+    background: #FFFFFF;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.error-box {
+    background-color: #FEF2F2;
+    color: #EF4444;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+.success-box {
+    background-color: #F0FDF4;
+    color: #16A34A;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+.icon-color {
+    color: #5B6FD4;
+}
+
+.navbar-custom {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 14px 32px;
+}
+
+.token-box {
+    background-color: #F8F9FA;
+    border-radius: 8px;
+    padding: 16px;
+    font-family: monospace;
+    font-size: 13px;
+    word-break: break-all;
+    color: #1A1A2E;
+    border: 1px solid #E5E7EB;
+}
+
+.info-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.valid-box {
+    background-color: #F0FDF4;
+    color: #16A34A;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #BBF7D0;
+}
+
+.expired-box {
+    background-color: #FFFBEB;
+    color: #D97706;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #FDE68A;
+}
+
+.invalid-box {
+    background-color: #FEF2F2;
+    color: #EF4444;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #FECACA;
+}
+
+.detail-table td {
+    padding: 8px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.detail-table td:first-child {
+    color: #6B7280;
+    width: 140px;
+}
+
+.detail-table td:last-child {
+    color: #1A1A2E;
+    font-weight: 500;
+}

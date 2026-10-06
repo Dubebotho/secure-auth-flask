@@ -1,0 +1,142 @@
+{% extends "base.html" %} {% block content %}
+
+<div
+  class="min-vh-100 d-flex align-items-center justify-content-center px-3 py-5"
+>
+  <div class="card-custom p-5" style="width: 100%; max-width: 480px">
+    <!-- Shield Icon -->
+    <div class="text-center mb-4">
+      <svg
+        width="48"
+        height="48"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#5B6FD4"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+      <h2 style="font-weight: 700; color: #1a1a2e; margin-top: 12px">
+        Create Account
+      </h2>
+    </div>
+
+    <!-- Error Message -->
+    {% if error %}
+    <div class="error-box mb-3">{{ error }}</div>
+    {% endif %}
+
+    <!-- Register Form -->
+    <form method="POST">
+      <div class="mb-3">
+        <label style="font-size: 14px; font-weight: 500; color: #1a1a2e"
+          >First Name</label
+        >
+        <input
+          type="text"
+          name="first_name"
+          class="form-control mt-1"
+          placeholder="Enter your first name"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label style="font-size: 14px; font-weight: 500; color: #1a1a2e"
+          >Last Name</label
+        >
+        <input
+          type="text"
+          name="last_name"
+          class="form-control mt-1"
+          placeholder="Enter your last name"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label style="font-size: 14px; font-weight: 500; color: #1a1a2e"
+          >Username</label
+        >
+        <input
+          type="text"
+          name="username"
+          class="form-control mt-1"
+          placeholder="Choose a username"
+          required
+        />
+      </div>
+      <div class="mb-1">
+        <label style="font-size: 14px; font-weight: 500; color: #1a1a2e"
+          >Password</label
+        >
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="form-control mt-1"
+          placeholder="Choose a password"
+          required
+          oninput="checkStrength(this.value)"
+        />
+      </div>
+
+      <!-- Password Strength Bar -->
+      <div class="mb-3">
+        <div class="d-flex justify-content-between mb-1">
+          <span style="font-size: 12px; color: #6b7280">Password Strength</span>
+          <span
+            id="strength-label"
+            style="font-size: 12px; font-weight: 500"
+          ></span>
+        </div>
+        <div style="background: #f3f4f6; border-radius: 99px; height: 5px">
+          <div
+            id="strength-bar"
+            style="
+              height: 5px;
+              border-radius: 99px;
+              width: 0%;
+              transition:
+                width 0.3s,
+                background 0.3s;
+            "
+          ></div>
+        </div>
+        <ul
+          id="strength-hints"
+          style="
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 8px;
+            padding-left: 16px;
+          "
+        ></ul>
+      </div>
+
+      <div class="mb-4">
+        <label style="font-size: 14px; font-weight: 500; color: #1a1a2e"
+          >Role</label
+        >
+        <select name="role" class="form-select mt-1">
+          <option value="staff">Staff</option>
+          <option value="manager">Manager</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary-custom w-100">
+        Create Account
+      </button>
+    </form>
+
+    <!-- Links -->
+    <div class="text-center mt-4">
+      <p style="color: #6b7280; font-size: 14px">
+        Already have an account?
+        <a href="/login" class="btn-link-custom">Sign In</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

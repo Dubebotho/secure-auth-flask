@@ -1,0 +1,5 @@
+Flask
+bcrypt
+PyJWT
+pytz
+python-dotenv
